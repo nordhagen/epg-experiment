@@ -1,5 +1,8 @@
 # Notes on decisions and progress
 
+## How to run the project
+* If you have Node installed, run ```npm start``` from the repository root and open your web browser at the address provided in the command line readout.
+
 ## Tech choices
 Given the need to focus on getting up and running quickly I chose to go with the project structure I am most familiar with, which is JavaScript with React+Redux. My previous experience with asynchronous Redux is with the Thunk middleware. However in this instance I will instead use Sagas. I also chose to use Parcel as a build system in the interest of simplicity.
 
@@ -14,6 +17,7 @@ I always like to stub out all views in an application right at the start, even i
 * Perform a performance test using Chrome DevTools/JSPerf by simple multiplication of data resulting in increased number of channels/programmes and subsequently increase in DOM nodes
 
 ## Nice-to-haves
+* Example of testing with Jest
 * Horizontal scrolling in the large EPG view
 * Horizontal zooming in the large EPG view
 * Service Worker to enable offline access
