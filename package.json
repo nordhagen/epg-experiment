@@ -4,7 +4,8 @@
   "description": "This Repo is intended to instruct new Native developer candidates on the steps to follow for completing the Norigin Media testing task.",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel -d dev src/index.html",
+    "build": "parcel build -d dist src/index.html"
   },
   "repository": {
     "type": "git",
