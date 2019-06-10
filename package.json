@@ -4,7 +4,7 @@
   "description": "This Repo is intended to instruct new Native developer candidates on the steps to follow for completing the Norigin Media testing task.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel src/index.html"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,9 @@
   "homepage": "https://github.com/nordhagen/native-candidate-tester#readme",
   "devDependencies": {
     "parcel": "^1.12.3"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
