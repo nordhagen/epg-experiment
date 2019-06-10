@@ -1,0 +1,23 @@
+{
+  "name": "native-candidate-tester",
+  "version": "1.0.0",
+  "description": "This Repo is intended to instruct new Native developer candidates on the steps to follow for completing the Norigin Media testing task.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://nordhagen@github.com/nordhagen/native-candidate-tester.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nordhagen/native-candidate-tester/issues"
+  },
+  "homepage": "https://github.com/nordhagen/native-candidate-tester#readme",
+  "devDependencies": {
+    "parcel": "^1.12.3"
+  }
+}
