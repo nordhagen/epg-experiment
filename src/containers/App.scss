@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
   max-height: 100vh;
+  background: black;
+  color: white;
+  font-family: sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
 .Header, .TabBar {
