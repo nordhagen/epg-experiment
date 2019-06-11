@@ -1,5 +1,5 @@
 import React from 'react'
-import mockupImage from '../../mockups/EPG_small.png'
+import './EPGListView.scss'
 
 class EPGListView extends React.Component {
 
@@ -10,7 +10,7 @@ class EPGListView extends React.Component {
 
   render(){
     return(
-      <img onClick={this.handleClick} src={mockupImage} alt=""/>
+      <section className="EPGListView" onClick={this.handleClick} />
     )
   }
 }
