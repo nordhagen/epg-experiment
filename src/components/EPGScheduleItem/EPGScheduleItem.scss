@@ -1,6 +1,41 @@
 .EPGScheduleItem {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  // border: 1px solid red;
+  flex-grow: 1;
+  height: 100%;
+  background: black;
+  position: relative;
+  z-index: 2;
+
+  &:hover {
+    background: #333;
+  }
+
+  h3 {
+    margin: 0;
+    order: 2;
+  }
 }
 .EPGScheduleItemLive {
-  display: inline-flex;
+  display: flex;
+}
+
+.timeSlot {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.progressBar {
+  order: 3;
+  background: #666;
+  height: 5px;
+  margin-top: 10px;
+
+  .track {
+    background: #EAB44A;
+    height: 100%;
+  }
 }

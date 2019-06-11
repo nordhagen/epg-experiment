@@ -6,9 +6,20 @@ const FMT = 'HH:MM'
 
 const EPGScheduleItem = props => {
   let now = moment(props.time)
+  let startTime = moment(props.start)
+  let endTime = moment(props.end)
+  let isLive = now.isBetween(startTime, endTime)
   let className = styles.EPGScheduleItem
-  if (now.isBetween(moment(props.start), moment(props.end))) {
-    className += styles.EPGScheduleItemLive
+  let trackStyle;
+
+  if (isLive) {
+    className += ' ' + styles.EPGScheduleItemLive
+    let duration = endTime.diff(startTime)
+    let elapsed = endTime.diff(now)
+    let progress = elapsed / duration
+    trackStyle = {
+      width: Math.round(progress * 100) + '%'
+    }
   }
 
   return (
@@ -17,6 +28,12 @@ const EPGScheduleItem = props => {
       <p className={styles.timeSlot}>
         {moment(props.start).format(FMT)} – {moment(props.end).format(FMT)}
       </p>
+
+      {isLive && (
+        <div className={styles.progressBar}>
+          <div style={trackStyle} className={styles.track} />
+        </div>
+      )}
     </li>
   )
 }

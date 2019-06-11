@@ -32,7 +32,7 @@ Needless to say this code base is going to be more elaborate than needed. I will
 * [x] Install Redux and set up a global clock time event dispatcher
 * [x] Set up loading of EPG data through Redux Saga
 * [x] Use loaded EPG data to render unstyled, semantic markup of the programme list
-* [ ] Code up the main EPG interface as list view first as it is the simplest
+* [x] Code up the main EPG interface as list view first as it is the simplest
 * [ ] Apply styling to programme list to make it match mockup, using dummy clock time
 * [ ] Implement progress bar for programme elements
 * [ ] Implement large EPG view layout for phablet-ish min-width of 550px
@@ -47,3 +47,4 @@ Needless to say this code base is going to be more elaborate than needed. I will
 * Converted global sass to scoped css modules by introducing the .postcssrc modules config and referencing imported style names from scss files in JSX
 * Introduced Redux and Redux Saga. Now has global clock time keeping and loading EPG data with fetch for the main EPG list
 * Starting to wonder how the list EPG interface is supposed to work as an EPG interface. It seems to only display the currently playing shows and gives no clues as to how the user would display upcoming or past shows.
+* Completed the EPG list view. Have been wondering about the star UI element. I suppose it denotes a favourite show, channel or schedule item, but I can't really tell which it is since there is no record of it in the mock data.
