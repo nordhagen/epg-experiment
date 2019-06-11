@@ -41,3 +41,4 @@ I always like to stub out all views in an application right at the start, even i
 * Using class-based components for now, but will look into converting at least some of them to functional in time
 * Implemented simple view switching as string dict key-based view map lookup in App
 * Component scaffolding complete. Will switch to feature branching for the rest of planned steps.
+* Introduced sass styles. So far not scoped.
