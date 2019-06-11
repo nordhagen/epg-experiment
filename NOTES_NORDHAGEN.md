@@ -42,3 +42,4 @@ I always like to stub out all views in an application right at the start, even i
 * Implemented simple view switching as string dict key-based view map lookup in App
 * Component scaffolding complete. Will switch to feature branching for the rest of planned steps.
 * Introduced sass styles. So far not scoped.
+* Converted global sass to scoped css modules by introducing the .postcssrc modules config and referencing imported style names from scss files in JSX
