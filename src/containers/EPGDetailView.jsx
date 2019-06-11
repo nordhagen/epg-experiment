@@ -1,5 +1,4 @@
 import React from 'react'
-import mockupImage from '../../mockups/details page EPG Future.png'
 
 class EPGDetailView extends React.Component {
 
@@ -10,7 +9,7 @@ class EPGDetailView extends React.Component {
 
   render(){
     return(
-      <img onClick={this.handleClick} src={mockupImage} alt=""/>
+      <section className="EPGDetailView" onClick={this.handleClick} />
     )
   }
 }
