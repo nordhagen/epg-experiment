@@ -1,6 +1,7 @@
 import React from 'react'
 import EPGListView from './EPGListView'
 import EPGDetailView from './EPGDetailView'
+import styles from './App.scss'
 
 const VIEW_MAP = {
   'list'    : EPGListView,
@@ -23,7 +24,9 @@ class App extends React.Component {
   render(){
     let View = VIEW_MAP[this.state.currentView]
     return(
-      <View handleClick={this.handleViewClick} />
+      <main className={styles.EPG}>
+        <View handleClick={this.handleViewClick} />
+      </main>
     )
   }
 }
