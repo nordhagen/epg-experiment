@@ -25,7 +25,7 @@ I always like to stub out all views in an application right at the start, even i
 
 ## Plan
 * [x] Set up React scaffolding and Parcel build system
-* [ ] Introduce both views as mockups and simple navigation between them
+* [x] Introduce both views as mockups and simple navigation between them
 * [ ] Introduce both breakpoints in main EPG view as mockups
 * [ ] Install Redux and set up a global clock time event dispatcher
 * [ ] Set up loading of EPG data through Redux Sagas
@@ -35,3 +35,9 @@ I always like to stub out all views in an application right at the start, even i
 * [ ] Implement progress bar for programme elements
 * [ ] Implement large EPG view layout for phablet-ish min-width of 550px
 * [ ] Get to the nice-to-haves
+
+## Notes
+* Starting out with separation of containers/pages and components
+* Using class-based components for now, but will look into converting at least some of them to functional in time
+* Implemented simple view switching as string dict key-based view map lookup in App
+* Component scaffolding complete. Will switch to feature branching for the rest of planned steps.
