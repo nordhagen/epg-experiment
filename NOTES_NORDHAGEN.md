@@ -33,8 +33,8 @@ Needless to say this code base is going to be more elaborate than needed. I will
 * [x] Set up loading of EPG data through Redux Saga
 * [x] Use loaded EPG data to render unstyled, semantic markup of the programme list
 * [x] Code up the main EPG interface as list view first as it is the simplest
-* [ ] Apply styling to programme list to make it match mockup, using dummy clock time
-* [ ] Implement progress bar for programme elements
+* [x] Apply styling to programme list to make it match mockup, using dummy clock time
+* [x] Implement progress bar for programme elements
 * [ ] Implement large EPG view layout for phablet-ish min-width of 550px
 * [ ] Get to the nice-to-haves
 
