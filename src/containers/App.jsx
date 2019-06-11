@@ -4,7 +4,7 @@ import EPGDetailView from './EPGDetailView'
 import styles from './App.scss'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { clockTick } from '../state/actions'
+import { clockTick, fetchEPG } from '../state/actions'
 
 import Header from '../components/Header'
 import TabBar from '../components/TabBar'
@@ -23,6 +23,7 @@ class App extends React.Component {
 
   componentDidMount(){
     this.tickInterval = setInterval(this.props.clockTick, 1000)
+    this.props.fetchEPG()
   }
 
   componentWillUnmount(){
@@ -51,6 +52,6 @@ class App extends React.Component {
   }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({ clockTick }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ clockTick, fetchEPG }, dispatch)
 
 export default connect(null, mapDispatchToProps)(App)

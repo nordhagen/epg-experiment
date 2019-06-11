@@ -18,7 +18,7 @@ class EPGListView extends React.Component {
 
     return (
       <section className={styles.EPGListView} onClick={this.handleClick}>
-        <div className={styles.clock}>{clockTime}</div>
+        {/* <div className={styles.clock}>{clockTime}</div> */}
         {channels.length && <ul>{channels}</ul>}
       </section>
     )
