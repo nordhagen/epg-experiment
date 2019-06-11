@@ -47,4 +47,6 @@ Needless to say this code base is going to be more elaborate than needed. I will
 * Converted global sass to scoped css modules by introducing the .postcssrc modules config and referencing imported style names from scss files in JSX
 * Introduced Redux and Redux Saga. Now has global clock time keeping and loading EPG data with fetch for the main EPG list
 * Starting to wonder how the list EPG interface is supposed to work as an EPG interface. It seems to only display the currently playing shows and gives no clues as to how the user would display upcoming or past shows.
-* Completed the EPG list view. Have been wondering about the star UI element. I suppose it denotes a favourite show, channel or schedule item, but I can't really tell which it is since there is no record of it in the mock data.
+* Completed the EPG list view. 
+* Decided to install moment.js for easier time manipulation and formatting.
+* Have been wondering about the star UI element. I suppose it denotes a favourite show, channel or schedule item, but I can't really tell which it is since there is no record of it in the mock data.
