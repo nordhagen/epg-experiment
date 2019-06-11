@@ -10,7 +10,7 @@ class EPGDetailView extends React.Component {
 
   render(){
     return(
-      <section className="EPGDetailView" onClick={this.handleClick} />
+      <section className={styles.EPGDetailView} onClick={this.handleClick} />
     )
   }
 }

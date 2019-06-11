@@ -1,5 +1,5 @@
 import React from 'react'
-import './EPGListView.scss'
+import styles from './EPGListView.scss'
 
 class EPGListView extends React.Component {
 
@@ -10,7 +10,7 @@ class EPGListView extends React.Component {
 
   render(){
     return(
-      <section className="EPGListView" onClick={this.handleClick} />
+      <section className={styles.EPGListView} onClick={this.handleClick} />
     )
   }
 }
