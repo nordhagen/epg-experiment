@@ -1,1 +1,4 @@
-export const CLOCK_TICK = 'CLOCK_TICK';
+export const CLOCK_TICK = 'CLOCK_TICK'
+export const EPG_DATA_REQUESTED = 'EPG_DATA_REQUESTED'
+export const EPG_DATA_SUCCESS = 'EPG_DATA_SUCCESS'
+export const EPG_DATA_ERROR = 'EPG_DATA_ERROR'
