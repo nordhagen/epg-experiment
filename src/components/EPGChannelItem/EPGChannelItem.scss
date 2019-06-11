@@ -1,0 +1,23 @@
+.EPGChannelItem {
+  display: flex;
+  flex-direction: row;
+  background: #333;
+  border-bottom: 1px solid #fff;
+  
+  h2 {
+    display: inline-flex;
+    width: 100px;
+    height: 100px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    text-indent: -1000px;
+    margin: 0;
+    // overflow: hidden;
+  }
+  
+  .scheduleList {
+    display: flex;
+    flex-direction: row;
+  }
+}
