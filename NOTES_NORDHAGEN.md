@@ -7,7 +7,7 @@
 ## Tech choices
 Given the need to focus on getting up and running quickly I chose to go with the project structure I am most familiar with, which is JavaScript with React+Redux. My previous experience with asynchronous Redux is with the Thunk middleware. However in this instance I will instead use Sagas. I also chose to use Parcel as a build system in the interest of simplicity.
 
-I will employ CSS Modules with SASS syntax for scoped CSS because I like how CSS modules compartmentalizes things. For CSS preprocessors I actually prefer Stylus, but since it has fallen out of fashion and SASS seems to be the industry standard in React apps I will go with that. As for layout strategies I usually do desktop sizes first because that's the design files that are often ready first. In this instance I think the provided mockups and my strategy makes for a smallest-layout-first approach. I will use CSS Grid for main layout framework, knowing full well that browser support has not hit prime time peak yet. I could do the same layout without it, it's just quicker this way. For the large EPG layout I think FlexBox is the obvious answer.
+I will employ CSS Modules with SASS syntax for scoped CSS because I like how CSS modules compartmentalizes things. For CSS preprocessors I actually prefer Stylus, but since it has fallen out of fashion and SASS seems to be the industry standard in React apps I will go with that. As for layout strategies I usually do desktop sizes first because that's the design files that are often ready first. In this instance I think the provided mockups and my strategy makes for a smallest-layout-first approach. ~~I will use CSS Grid for main layout framework, knowing full well that browser support has not hit prime time peak yet. I could do the same layout without it, it's just quicker this way. For the large EPG layout I think FlexBox is the obvious answer.~~ After some trial and error I decided that FlexBox was the obvious answer for all parts of the ui.
 
 I always like to stub out all views in an application right at the start, even if they're all just wireframes, mockups or simple rectangles with the name of the view in them. Then whenever I start work on a single one of these views I like to start with bare, semantic markup first. Then adding styles and lastly adding interactivity and functionality. I think this gives me a nice, visual way of gauging my progress.
 
@@ -31,8 +31,8 @@ Needless to say this code base is going to be more elaborate than needed. I will
 * [x] Introduce both breakpoints in main EPG view as mockups
 * [x] Install Redux and set up a global clock time event dispatcher
 * [x] Set up loading of EPG data through Redux Saga
+* [x] Use loaded EPG data to render unstyled, semantic markup of the programme list
 * [ ] Code up the main EPG interface as list view first as it is the simplest
-* [ ] Use loaded EPG data to render unstyled, semantic markup of the programme list
 * [ ] Apply styling to programme list to make it match mockup, using dummy clock time
 * [ ] Implement progress bar for programme elements
 * [ ] Implement large EPG view layout for phablet-ish min-width of 550px
