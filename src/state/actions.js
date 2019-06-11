@@ -1,8 +1,8 @@
 import { CLOCK_TICK, EPG_DATA_REQUESTED, EPG_DATA_SUCCESS } from './actionTypes'
 
-export const clockTick = time => ({
+export const clockTick = increment => ({
   type: CLOCK_TICK,
-  payload: new Date()
+  payload: { increment }
 })
 
 export const fetchEPG = () => ({

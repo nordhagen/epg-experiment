@@ -10,6 +10,7 @@ import Header from '../components/Header'
 import TabBar from '../components/TabBar'
 
 const tickInterval = 0;
+const tickDuration = 1000
 
 const VIEW_MAP = {
   'list'    : EPGListView,
@@ -22,7 +23,7 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    this.tickInterval = setInterval(this.props.clockTick, 1000)
+    this.tickInterval = setInterval(()=> this.props.clockTick(tickDuration), tickDuration)
     this.props.fetchEPG()
   }
 

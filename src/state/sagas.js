@@ -5,9 +5,10 @@ import {
 } from './actionTypes'
 
 import { fetchEPGSuccess } from './actions'
-
 import { call, put, takeLatest } from 'redux-saga/effects'
 import { api } from '../services'
+
+import epgTimeRange from '../utils/epgTimeRange'
 
 function* fetchEPGData(action) {
   try {
