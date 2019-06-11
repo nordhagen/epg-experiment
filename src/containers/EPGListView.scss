@@ -6,14 +6,14 @@
   background: url('../../mockups/epg.png') no-repeat;
   background-size: contain;
 
-  @include media(phablet) { 
+  @include media(phablet) {
     background-image: url('../../mockups/EPG_small.png');
   }
 }
 
 .clock {
   background: white;
-  padding:10px;
+  padding: 10px;
   color: black;
   font-family: sans-serif;
   width: 100%;

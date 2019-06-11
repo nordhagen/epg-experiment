@@ -1,16 +1,16 @@
-import { CLOCK_TICK } from "../actionTypes";
+import { CLOCK_TICK } from '../actionTypes'
 
-const initialState = new Date();
+const initialState = new Date()
 
 const time = (state = initialState, action) => {
   switch (action.type) {
     case CLOCK_TICK: {
-      return action.payload;
+      return action.payload
     }
     default: {
-      return state;
+      return state
     }
   }
-};
+}
 
-export default time;
+export default time
