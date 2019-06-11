@@ -1,11 +1,11 @@
 import { CLOCK_TICK } from "../actionTypes";
 
-const initialState = Date.now();
+const initialState = new Date();
 
 const time = (state = initialState, action) => {
   switch (action.type) {
     case CLOCK_TICK: {
-      return action.payload.time;
+      return action.payload;
     }
     default: {
       return state;
