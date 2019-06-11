@@ -10,7 +10,6 @@ class EPGListView extends React.Component {
 
   render() {
     let channels = []
-
     if (this.props.channels.length) {
       channels = this.props.channels.map(d => <li key={d.id}>{d.title}</li>)
     }
