@@ -26,7 +26,7 @@ I always like to stub out all views in an application right at the start, even i
 ## Plan
 * [x] Set up React scaffolding and Parcel build system
 * [x] Introduce both views as mockups and simple navigation between them
-* [ ] Introduce both breakpoints in main EPG view as mockups
+* [x] Introduce both breakpoints in main EPG view as mockups
 * [ ] Install Redux and set up a global clock time event dispatcher
 * [ ] Set up loading of EPG data through Redux Sagas
 * [ ] Code up the main EPG interface as list view first as it is the simplest
