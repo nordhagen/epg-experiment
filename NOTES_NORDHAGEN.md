@@ -30,7 +30,7 @@ Needless to say this code base is going to be more elaborate than needed. I will
 * [x] Introduce both views as mockups and simple navigation between them
 * [x] Introduce both breakpoints in main EPG view as mockups
 * [x] Install Redux and set up a global clock time event dispatcher
-* [ ] Set up loading of EPG data through Redux Sagas
+* [x] Set up loading of EPG data through Redux Saga
 * [ ] Code up the main EPG interface as list view first as it is the simplest
 * [ ] Use loaded EPG data to render unstyled, semantic markup of the programme list
 * [ ] Apply styling to programme list to make it match mockup, using dummy clock time
@@ -45,3 +45,4 @@ Needless to say this code base is going to be more elaborate than needed. I will
 * Component scaffolding complete. Will switch to feature branching for the rest of planned steps.
 * Introduced sass styles. So far not scoped.
 * Converted global sass to scoped css modules by introducing the .postcssrc modules config and referencing imported style names from scss files in JSX
+* Introduced Redux and Redux Saga. Now has global clock time keeping and loading EPG data with fetch for the main EPG list
