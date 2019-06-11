@@ -1,0 +1,40 @@
+{
+  "name": "native-candidate-tester",
+  "version": "1.0.0",
+  "description": "This Repo is intended to instruct new Native developer candidates on the steps to follow for completing the Norigin Media testing task.",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel -d dev src/index.html",
+    "build": "parcel build -d dist src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://nordhagen@github.com/nordhagen/native-candidate-tester.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nordhagen/native-candidate-tester/issues"
+  },
+  "homepage": "https://github.com/nordhagen/native-candidate-tester#readme",
+  "assetsPath": "mock-data",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "parcel": "^1.12.3",
+    "postcss-modules": "^1.4.1",
+    "sass": "^1.21.0",
+    "parcel-plugin-asset-copier": "^1.0.0"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.1",
+    "redux-saga": "^1.0.3"
+  }
+}

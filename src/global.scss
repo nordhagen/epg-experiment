@@ -1,0 +1,32 @@
+@mixin media($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: 549px) {
+      @content;
+    }
+  } @else if $media == phablet {
+    @media only screen and (min-width: 550px) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $media == desktop {
+    @media only screen and (min-width: 1024px) {
+      @content;
+    }
+  } @else if $media == large {
+    @media only screen and (min-width: 1280px) {
+      @content;
+    }
+  }
+}
+
+body,
+html {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+}
