@@ -11,6 +11,8 @@ I will employ CSS Modules with SASS syntax for scoped CSS because I like how CSS
 
 I always like to stub out all views in an application right at the start, even if they're all just wireframes, mockups or simple rectangles with the name of the view in them. Then whenever I start work on a single one of these views I like to start with bare, semantic markup first. Then adding styles and lastly adding interactivity and functionality. I think this gives me a nice, visual way of gauging my progress.
 
+Needless to say this code base is going to be more elaborate than needed. I will imagine this as being the start of a fully featured VOD app where the architecture choices would need to take into account the apparent scale of the app in the near future. 
+
 ## Goals
 * Make the main EPG view in both versions to demonstrate how triggering different breakpoints
 * Make the programme detail view as just a mockup just to show view switching
@@ -27,7 +29,7 @@ I always like to stub out all views in an application right at the start, even i
 * [x] Set up React scaffolding and Parcel build system
 * [x] Introduce both views as mockups and simple navigation between them
 * [x] Introduce both breakpoints in main EPG view as mockups
-* [ ] Install Redux and set up a global clock time event dispatcher
+* [x] Install Redux and set up a global clock time event dispatcher
 * [ ] Set up loading of EPG data through Redux Sagas
 * [ ] Code up the main EPG interface as list view first as it is the simplest
 * [ ] Use loaded EPG data to render unstyled, semantic markup of the programme list

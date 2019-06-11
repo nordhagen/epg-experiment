@@ -2,6 +2,11 @@ import React from 'react'
 import EPGListView from './EPGListView'
 import EPGDetailView from './EPGDetailView'
 import styles from './App.scss'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { clockTick } from '../state/actions'
+
+const tickInterval = 0;
 
 const VIEW_MAP = {
   'list'    : EPGListView,
@@ -11,6 +16,14 @@ const VIEW_MAP = {
 class App extends React.Component {
   state = {
     currentView: 'list'
+  }
+
+  componentDidMount(){
+    this.tickInterval = setInterval(this.props.clockTick, 1000)
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.tickInterval)
   }
 
   handleViewClick = (origin) => {
@@ -31,4 +44,6 @@ class App extends React.Component {
   }
 }
 
-export default App
+const mapDispatchToProps = dispatch => bindActionCreators({ clockTick }, dispatch)
+
+export default connect(null, mapDispatchToProps)(App)

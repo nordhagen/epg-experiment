@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './EPGListView.scss'
+import { connect } from 'react-redux'
 
 class EPGListView extends React.Component {
 
@@ -10,9 +11,13 @@ class EPGListView extends React.Component {
 
   render(){
     return(
-      <section className={styles.EPGListView} onClick={this.handleClick} />
+      <section className={styles.EPGListView} onClick={this.handleClick}>
+        <div className={styles.clock}>{this.props.time.toLocaleTimeString()}</div>
+      </section>
     )
   }
 }
 
-export default EPGListView
+const mapStateToProps = state => ({ time: state.time })
+
+export default connect(mapStateToProps)(EPGListView)
