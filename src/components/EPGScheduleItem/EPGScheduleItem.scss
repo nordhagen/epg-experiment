@@ -37,5 +37,6 @@
   .track {
     background: #EAB44A;
     height: 100%;
+    transition: width 250ms ease-in-out;
   }
 }

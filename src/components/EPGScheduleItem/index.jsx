@@ -16,7 +16,7 @@ const EPGScheduleItem = props => {
     className += ' ' + styles.EPGScheduleItemLive
     let duration = endTime.diff(startTime)
     let elapsed = endTime.diff(now)
-    let progress = elapsed / duration
+    let progress = 1 - (elapsed / duration)
     trackStyle = {
       width: Math.round(progress * 100) + '%'
     }

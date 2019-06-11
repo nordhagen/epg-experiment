@@ -5,12 +5,13 @@ import styles from './App.scss'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { clockTick, fetchEPG } from '../state/actions'
+import { CLOCK_TICK_FREQUENCY } from '../config'
 
 import Header from '../components/Header'
 import TabBar from '../components/TabBar'
 
 const tickInterval = 0
-const tickDuration = 60000
+const tickDuration = 1000
 
 const VIEW_MAP = {
   list: EPGListView,
@@ -24,8 +25,8 @@ class App extends React.Component {
 
   componentDidMount() {
     this.tickInterval = setInterval(
-      () => this.props.clockTick(tickDuration),
-      tickDuration
+      () => this.props.clockTick(CLOCK_TICK_FREQUENCY),
+      CLOCK_TICK_FREQUENCY
     )
     this.props.fetchEPG()
   }

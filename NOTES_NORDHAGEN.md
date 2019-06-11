@@ -1,8 +1,16 @@
 # Notes on decisions and progress
 
 ## How to run the project
-* If you have Node installed, run ```npm start``` from the repository root and open your web browser at the address provided in the command line readout.
+If you have Node installed, run ```npm start``` from the repository root and open your web browser at the address provided in the command line readout.
 
+If you don't care to install Node, just cd to the dist directory, run a simple HTTP server and visit the address/port combo in the readout.
+
+````
+$ cd dist
+$ python -m SimpleHTTPServer
+````
+
+If you wish to play with time of day and speed of time in the app you will need to run ```npm start```. Play with the constants in src/config.js and observe the effect.
 
 ## Tech choices
 Given the need to focus on getting up and running quickly I chose to go with the project structure I am most familiar with, which is JavaScript with React+Redux. My previous experience with asynchronous Redux is with the Thunk middleware. However in this instance I will instead use Sagas. I also chose to use Parcel as a build system in the interest of simplicity.

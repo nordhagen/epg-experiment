@@ -6,7 +6,7 @@ const EPGChannelItem = props => {
   let inlineStyle = { backgroundImage: `url(${props.images.logo})` }
   
   let schedules = props.schedules.map(item => (
-    <EPGScheduleItem key={Math.random()} time={props.time} { ...item }/>
+    <EPGScheduleItem key={item.id} time={props.time} { ...item }/>
   ))
 
   return (

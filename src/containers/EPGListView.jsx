@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import styles from './EPGListView.scss'
 import EPGChannelItem from '../components/EPGChannelItem'
+import { SHOW_CLOCK } from '../config'
 
 class EPGListView extends React.Component {
   handleClick = e => {
@@ -14,7 +15,7 @@ class EPGListView extends React.Component {
     if (this.props.channels.length) {
       let time = this.props.time
       channels = this.props.channels.map(d => (
-        <EPGChannelItem key={Math.random()} time={time} {...d} />
+        <EPGChannelItem key={d.id} time={time} {...d} />
       ))
     }
 
@@ -22,7 +23,9 @@ class EPGListView extends React.Component {
 
     return (
       <section className={styles.EPGListView} onClick={this.handleClick}>
-        {/* <div className={styles.clock}>{clockTime}</div> */}
+        {SHOW_CLOCK && 
+          <div className={styles.clock}>{clockTime}</div>
+        }
         {channels.length && <ul>{channels}</ul>}
       </section>
     )
