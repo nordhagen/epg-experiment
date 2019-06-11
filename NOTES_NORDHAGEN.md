@@ -24,14 +24,14 @@ I always like to stub out all views in an application right at the start, even i
 * Service Worker to enable offline access
 
 ## Plan
-[x] Set up React scaffolding and Parcel build system
-[ ] Introduce both views as mockups and simple navigation between them
-[ ] Introduce both breakpoints in main EPG view as mockups
-[ ] Install Redux and set up a global clock time event dispatcher
-[ ] Set up loading of EPG data through Redux Sagas
-[ ] Code up the main EPG interface as list view first as it is the simplest
-[ ] Use loaded EPG data to render unstyled, semantic markup of the programme list
-[ ] Apply styling to programme list to make it match mockup, using dummy clock time
-[ ] Implement progress bar for programme elements
-[ ] Implement large EPG view layout for phablet-ish min-width of 550px
-[ ] Get to the nice-to-haves
+* [x] Set up React scaffolding and Parcel build system
+* [ ] Introduce both views as mockups and simple navigation between them
+* [ ] Introduce both breakpoints in main EPG view as mockups
+* [ ] Install Redux and set up a global clock time event dispatcher
+* [ ] Set up loading of EPG data through Redux Sagas
+* [ ] Code up the main EPG interface as list view first as it is the simplest
+* [ ] Use loaded EPG data to render unstyled, semantic markup of the programme list
+* [ ] Apply styling to programme list to make it match mockup, using dummy clock time
+* [ ] Implement progress bar for programme elements
+* [ ] Implement large EPG view layout for phablet-ish min-width of 550px
+* [ ] Get to the nice-to-haves
