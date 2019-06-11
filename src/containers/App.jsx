@@ -6,6 +6,9 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { clockTick } from '../state/actions'
 
+import Header from '../components/Header'
+import TabBar from '../components/TabBar'
+
 const tickInterval = 0;
 
 const VIEW_MAP = {
@@ -37,9 +40,13 @@ class App extends React.Component {
   render(){
     let View = VIEW_MAP[this.state.currentView]
     return(
-      <main className={styles.EPG}>
-        <View handleClick={this.handleViewClick} />
-      </main>
+      <div className={styles.App}>
+        <Header className={styles.Header}/>
+        <main className={styles.main}>
+          <View handleClick={this.handleViewClick} />
+        </main>
+        <TabBar className={styles.TabBar}/>
+      </div>
     )
   }
 }

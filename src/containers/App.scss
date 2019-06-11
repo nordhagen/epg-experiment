@@ -1,3 +1,23 @@
-.EPG {
-  width: 100%;
+.App {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.Header, .TabBar {
+  line-height: 0;
+  img {
+    width: 100%
+  }
+}
+
+.Header {
+}
+
+.main {
+  position: relative;
+  overflow-y: auto;
+}
+
+.TabBar {
 }
