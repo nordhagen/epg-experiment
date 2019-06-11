@@ -58,3 +58,4 @@ Needless to say this code base is going to be more elaborate than needed. I will
 * Completed the EPG list view. 
 * Decided to install moment.js for easier time manipulation and formatting.
 * Have been wondering about the star UI element. I suppose it denotes a favourite show, channel or schedule item, but I can't really tell which it is since there is no record of it in the mock data.
+* The mock data does not have unique ids for all channels and schedule items, so I had to regenerate their ids upon successful fetch of data. The reason for this is that all those elements nee unique keys in react for the shadow DOM to work its optimization magic.
