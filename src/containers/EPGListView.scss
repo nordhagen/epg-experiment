@@ -5,10 +5,20 @@
   height: 100vh;
   background: url('../../mockups/epg.png') no-repeat;
   background-size: contain;
-
+  
   @include media(phablet) { 
     background-image: url('../../mockups/EPG_small.png');
   }
+
+  ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.EPGListView {
+  background: none;
 }
 
 .clock {
@@ -16,9 +26,5 @@
   padding:10px;
   color: black;
   font-family: sans-serif;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
+  text-align: center;
 }
