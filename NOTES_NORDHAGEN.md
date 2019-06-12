@@ -36,7 +36,7 @@ I will test the app in the latest versions of Chrome, Safari and Firefox.
 
 ## Nice-to-haves
 
-- [ ] Example of testing with Jest
+- [x] Example of testing with Jest
 - [ ] Service Worker to enable offline access
 - [ ] Horizontal scrolling in the large EPG view
 - [ ] Horizontal zooming in the large EPG view
@@ -53,7 +53,7 @@ I will test the app in the latest versions of Chrome, Safari and Firefox.
 - [x] Apply styling to programme list to make it match mockup, using dummy clock time
 - [x] Implement progress bar for programme elements
 - [x] Implement large EPG view layout for phablet-ish min-width of 550px
-- [ ] Get to the nice-to-haves
+- [-] Get to the nice-to-haves
 
 ## Play-by-play notes
 
@@ -73,3 +73,4 @@ I will test the app in the latest versions of Chrome, Safari and Firefox.
 - Introduced ReactTransitionGroup to enable EPGDetailView to transition nicely in and out
 - Added the > phablet layout for the EPG. Horizontal scrolling works per channel, which is not the way it's supposed to work.
 - Added a slight gradient overlay to EPG items to make them prettier when their titles don't fit in the box.
+- Finished simple example of react component testing with Jest
