@@ -6,7 +6,9 @@ const initialState = new Date(STARTING_TIME_OF_DAY)
 const time = (state = initialState, action) => {
   switch (action.type) {
     case CLOCK_TICK: {
-      return new Date(state.getTime() + action.payload.increment * TIME_MULTIPLIER)
+      return new Date(
+        state.getTime() + action.payload.increment * TIME_MULTIPLIER
+      )
     }
     default: {
       return state
