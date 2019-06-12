@@ -1,10 +1,12 @@
+@import '../../global.scss';
+
 .EPGChannelItem {
   display: flex;
   flex-direction: row;
   height: 100px;
 
-  &:hover {
-    background: #333;
+  @include media(phablet) {
+    border-top: 1px solid #333;
   }
 
   h2 {
@@ -18,14 +20,21 @@
     background-size: 70%;
     text-indent: -1000px;
     margin: 0;
-    // overflow: hidden;
   }
 
   .scheduleList {
     display: block;
     width: 100%;
-    margin: 0 20px 0 120px;
+    margin: 0 20px 0 100px;
     position: relative;
+
+    @include media(phablet) {
+      width: 100%;
+      white-space: nowrap;
+      overflow: auto;
+      margin-right: 0;
+      max-width: 100000px;
+    }
 
     &:before {
       content: 'Nothing on right now';

@@ -52,7 +52,7 @@ I will test the app in the latest versions of Chrome, Safari and Firefox.
 - [x] Code up the main EPG interface as list view first as it is the simplest
 - [x] Apply styling to programme list to make it match mockup, using dummy clock time
 - [x] Implement progress bar for programme elements
-- [ ] Implement large EPG view layout for phablet-ish min-width of 550px
+- [x] Implement large EPG view layout for phablet-ish min-width of 550px
 - [ ] Get to the nice-to-haves
 
 ## Notes
@@ -71,3 +71,5 @@ I will test the app in the latest versions of Chrome, Safari and Firefox.
 - The mock data does not have unique ids for all channels and schedule items, so I had to regenerate their ids upon successful fetch of data. The reason for this is that all those elements nee unique keys in react for the shadow DOM to work its optimization magic.
 - Replaced the simple view component switching with a more permanent state managed system for displaying modals from anywhere in the app.
 - Introduced ReactTransitionGroup to enable EPGDetailView to transition nicely in and out
+- Added the > phablet layout for the EPG. Horizontal scrolling works per channel, which is not the way it's supposed to work.
+- Added a slight gradient overlay to EPG items to make them prettier when their titles don't fit in the box.

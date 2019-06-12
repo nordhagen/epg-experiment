@@ -5,16 +5,21 @@ import styles from './EPGScheduleItem'
 const FMT = 'HH:MM'
 
 const EPGScheduleItem = props => {
-  let now = moment(props.time)
-  let startTime = moment(props.start)
-  let endTime = moment(props.end)
-  let isLive = now.isBetween(startTime, endTime)
-  let className = styles.EPGScheduleItem
-  let trackStyle
+  let now = moment(props.time),
+    startTime = moment(props.start),
+    endTime = moment(props.end),
+    isLive = now.isBetween(startTime, endTime),
+    className = styles.EPGScheduleItem,
+    duration = endTime.diff(startTime),
+    durationHours = duration / (60 * 60 * 1000)
 
+  let inlineStyle = {
+    width: durationHours * 80 + '%'
+  }
+
+  let trackStyle
   if (isLive) {
     className += ' ' + styles.EPGScheduleItemLive
-    let duration = endTime.diff(startTime)
     let elapsed = endTime.diff(now)
     let progress = 1 - elapsed / duration
     trackStyle = {
@@ -24,6 +29,7 @@ const EPGScheduleItem = props => {
 
   return (
     <li
+      style={inlineStyle}
       className={className}
       onClick={e => {
         props.selectDelegate(props)

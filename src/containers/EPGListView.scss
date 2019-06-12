@@ -3,12 +3,6 @@
 .EPGListView {
   width: 100%;
   height: 100vh;
-  background: url('../../mockups/epg.png') no-repeat;
-  background-size: contain;
-
-  @include media(phablet) {
-    background-image: url('../../mockups/EPG_small.png');
-  }
 
   ul,
   li {
