@@ -29,17 +29,17 @@ I will test the app in the latest versions of Chrome, Safari and Firefox.
 
 ## Goals
 
-- Make the main EPG view in both versions to demonstrate how triggering different breakpoints
-- Make the programme detail view as just a mockup just to show view switching
-- Make the transition between the views animated to show how that would work
-- Perform a performance test using Chrome DevTools/JSPerf by simple multiplication of data resulting in increased number of channels/programmes and subsequently increase in DOM nodes
+- [x] Make the main EPG view in both versions to demonstrate how triggering different breakpoints
+- [x] Make the programme detail view as just a mockup just to show view switching
+- [x] Make the transition between the views animated to show how that would work
+- [ ] Perform a performance test using Chrome DevTools/JSPerf by simple multiplication of data resulting in increased number of channels/programmes and subsequently increase in DOM nodes
 
 ## Nice-to-haves
 
-- Example of testing with Jest
-- Horizontal scrolling in the large EPG view
-- Horizontal zooming in the large EPG view
-- Service Worker to enable offline access
+- [ ] Example of testing with Jest
+- [ ] Service Worker to enable offline access
+- [ ] Horizontal scrolling in the large EPG view
+- [ ] Horizontal zooming in the large EPG view
 
 ## Plan
 
@@ -55,7 +55,7 @@ I will test the app in the latest versions of Chrome, Safari and Firefox.
 - [x] Implement large EPG view layout for phablet-ish min-width of 550px
 - [ ] Get to the nice-to-haves
 
-## Notes
+## Play-by-play notes
 
 - Starting out with separation of containers/pages and components
 - Using class-based components for now, but will look into converting at least some of them to functional in time
