@@ -34,7 +34,7 @@ export const makeIdsUnique = data => {
 // live or not, but decided to go with a virtual clock
 // inside the app instead to simulate actual time. This
 // logic then had to be put in the individual schedule
-// item's render functio instead.
+// item's render function instead.
 
 export const markAsLive = (channelsOriginal, currentDate) => {
   channels = channelsOriginal.slice()
