@@ -1,22 +1,48 @@
+@import '../global.scss';
+
 .App {
   display: flex;
   flex-direction: column;
   max-height: 100vh;
   background: black;
   color: white;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: 'Trebuchet MS', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-.Header, .TabBar {
+.Header,
+.TabBar {
   line-height: 0;
   img {
-    width: 100%
+    width: 100%;
   }
 }
 
 .main {
   position: relative;
   overflow-y: auto;
+}
+
+:global {
+  .modal-enter {
+    opacity: 0;
+    transform: translate3d(10%, 0, 0);
+  }
+  .modal-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .modal-exit {
+    opacity: 1;
+  }
+  .modal-exit-active {
+    opacity: 0;
+    transform: translate3d(10%, 0, 0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .modal-enter-done {
+    width: 100%;
+  }
 }

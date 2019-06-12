@@ -7,10 +7,10 @@ const initialState = {
 const nav = (state = initialState, action) => {
   switch (action.type) {
     case OPEN_MODAL_VIEW: {
-      return {...state, modal: action.payload}
+      return { ...state, modal: action.payload }
     }
     case CLOSE_MODAL_VIEW: {
-      return {...state, modal: null}
+      return { ...state, modal: null }
     }
     default: {
       return state
