@@ -10,20 +10,25 @@ const EPGScheduleItem = props => {
   let endTime = moment(props.end)
   let isLive = now.isBetween(startTime, endTime)
   let className = styles.EPGScheduleItem
-  let trackStyle;
+  let trackStyle
 
   if (isLive) {
     className += ' ' + styles.EPGScheduleItemLive
     let duration = endTime.diff(startTime)
     let elapsed = endTime.diff(now)
-    let progress = 1 - (elapsed / duration)
+    let progress = 1 - elapsed / duration
     trackStyle = {
       width: Math.round(progress * 100) + '%'
     }
   }
 
   return (
-    <li className={className}>
+    <li
+      className={className}
+      onClick={e => {
+        props.clickHandler(props)
+      }}
+    >
       <h3>{props.title}</h3>
       <p className={styles.timeSlot}>
         {moment(props.start).format(FMT)} – {moment(props.end).format(FMT)}

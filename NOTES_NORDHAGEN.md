@@ -15,11 +15,15 @@ If you wish to play with time of day and speed of time in the app you will need 
 ## Tech choices
 Given the need to focus on getting up and running quickly I chose to go with the project structure I am most familiar with, which is JavaScript with React+Redux. My previous experience with asynchronous Redux is with the Thunk middleware. However in this instance I will instead use Sagas. I also chose to use Parcel as a build system in the interest of simplicity.
 
+The separation between containers and components will be a hybrid one. Components will be stateless and unaware of the architecture of the rest of the app, whereas the containers will be stateful and connected to the state management system. Where it will differ from accepted best practices is in that containers and their corresponding component rendering code will be put together into one class file.
+
 I will employ CSS Modules with SASS syntax for scoped CSS because I like how CSS modules compartmentalizes things. For CSS preprocessors I actually prefer Stylus, but since it has fallen out of fashion and SASS seems to be the industry standard in React apps I will go with that. As for layout strategies I usually do desktop sizes first because that's the design files that are often ready first. In this instance I think the provided mockups and my strategy makes for a smallest-layout-first approach. ~~I will use CSS Grid for main layout framework, knowing full well that browser support has not hit prime time peak yet. I could do the same layout without it, it's just quicker this way. For the large EPG layout I think FlexBox is the obvious answer.~~ After some trial and error I decided that FlexBox was the obvious answer for all parts of the ui.
 
 I always like to stub out all views in an application right at the start, even if they're all just wireframes, mockups or simple rectangles with the name of the view in them. Then whenever I start work on a single one of these views I like to start with bare, semantic markup first. Then adding styles and lastly adding interactivity and functionality. I think this gives me a nice, visual way of gauging my progress.
 
-Needless to say this code base is going to be more elaborate than needed. I will imagine this as being the start of a fully featured VOD app where the architecture choices would need to take into account the apparent scale of the app in the near future. 
+Needless to say this code base is going to be more elaborate than needed. I will imagine this as being the start of a fully featured VOD app where the architecture choices would need to take into account the apparent scale of the app in the near future.
+
+I will test the app in the latest versions of Chrome, Safari and Firefox.
 
 ## Goals
 * Make the main EPG view in both versions to demonstrate how triggering different breakpoints
@@ -59,3 +63,4 @@ Needless to say this code base is going to be more elaborate than needed. I will
 * Decided to install moment.js for easier time manipulation and formatting.
 * Have been wondering about the star UI element. I suppose it denotes a favourite show, channel or schedule item, but I can't really tell which it is since there is no record of it in the mock data.
 * The mock data does not have unique ids for all channels and schedule items, so I had to regenerate their ids upon successful fetch of data. The reason for this is that all those elements nee unique keys in react for the shadow DOM to work its optimization magic.
+* Replaced the simple view component switching with a more permanent state managed system for displaying modals from anywhere in the app.

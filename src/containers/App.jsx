@@ -1,27 +1,19 @@
 import React from 'react'
-import EPGListView from './EPGListView'
-import EPGDetailView from './EPGDetailView'
 import styles from './App.scss'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { clockTick, fetchEPG } from '../state/actions'
+import { clockTick, fetchEPG, closeModal } from '../state/actions'
 import { CLOCK_TICK_FREQUENCY } from '../config'
 
+import EPGListView from './EPGListView'
+import EPGDetailView from './EPGDetailView'
 import Header from '../components/Header'
 import TabBar from '../components/TabBar'
 
 const tickInterval = 0
 const tickDuration = 1000
 
-const VIEW_MAP = {
-  list: EPGListView,
-  detail: EPGDetailView
-}
-
 class App extends React.Component {
-  state = {
-    currentView: 'list'
-  }
 
   componentDidMount() {
     this.tickInterval = setInterval(
@@ -35,19 +27,18 @@ class App extends React.Component {
     clearInterval(this.tickInterval)
   }
 
-  handleViewClick = origin => {
-    let newView = origin === 'list' ? 'detail' : 'list'
-
-    this.setState({ currentView: newView })
-  }
-
   render() {
-    let View = VIEW_MAP[this.state.currentView]
     return (
       <div className={styles.App}>
         <Header className={styles.Header} />
         <main className={styles.main}>
-          <View handleClick={this.handleViewClick} />
+          <EPGListView handleClick={this.handleViewClick} />
+          {this.props.nav.modal !== null && (
+            <EPGDetailView
+              data={this.props.nav.modal}
+              closeDelegate={this.props.closeModal}
+            />
+          )}
         </main>
         <TabBar className={styles.TabBar} />
       </div>
@@ -55,10 +46,14 @@ class App extends React.Component {
   }
 }
 
+const mapStateToProps = state => ({
+  nav: state.nav
+})
+
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ clockTick, fetchEPG }, dispatch)
+  bindActionCreators({ clockTick, fetchEPG, closeModal }, dispatch)
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(App)
