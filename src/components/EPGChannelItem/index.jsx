@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './EPGChannelItem.scss'
+import styles from './style.scss'
 import EPGScheduleItem from '../EPGScheduleItem'
 
 const EPGChannelItem = props => {

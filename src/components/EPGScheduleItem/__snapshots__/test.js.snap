@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It renders live item with progress bar 1`] = `
+<li
+  className="undefined undefined"
+  onClick={[Function]}
+  style={
+    Object {
+      "width": "53.33333333333333%",
+    }
+  }
+>
+  <h3>
+    Vikings
+  </h3>
+  <p>
+    12:10
+     – 
+    13:10
+  </p>
+  <div>
+    <div
+      style={
+        Object {
+          "width": "25%",
+        }
+      }
+    />
+  </div>
+</li>
+`;
+
+exports[`It renders past item with no progress bar 1`] = `
+<li
+  onClick={[Function]}
+  style={
+    Object {
+      "width": "53.33333333333333%",
+    }
+  }
+>
+  <h3>
+    Vikings
+  </h3>
+  <p>
+    12:10
+     – 
+    13:10
+  </p>
+</li>
+`;
