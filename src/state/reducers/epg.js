@@ -1,5 +1,5 @@
 import { EPG_DATA_SUCCESS } from '../actionTypes'
-import { markAsLive, makeIdsUnique } from '../../utils/epg'
+import { makeIdsUnique } from '../../utils/epg'
 
 const initialState = { channels: [] }
 
