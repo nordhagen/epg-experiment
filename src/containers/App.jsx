@@ -13,7 +13,6 @@ import Header from '../components/Header'
 import TabBar from '../components/TabBar'
 
 const tickInterval = 0
-const tickDuration = 1000
 
 class App extends React.Component {
   componentDidMount() {
