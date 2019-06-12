@@ -8,7 +8,7 @@ const EPGChannelItem = props => {
     <EPGScheduleItem
       key={item.id}
       time={props.time}
-      clickHandler={props.handleScheduleClick}
+      selectDelegate={props.scheduleSelectDelegate}
       {...item}
     />
   ))

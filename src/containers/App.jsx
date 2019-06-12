@@ -32,7 +32,7 @@ class App extends React.Component {
       <div className={styles.App}>
         <Header className={styles.Header} />
         <main className={styles.main}>
-          <EPGListView handleClick={this.handleViewClick} />
+          <EPGListView />
           {this.props.nav.modal !== null && (
             <EPGDetailView
               data={this.props.nav.modal}

@@ -26,7 +26,7 @@ const EPGScheduleItem = props => {
     <li
       className={className}
       onClick={e => {
-        props.clickHandler(props)
+        props.selectDelegate(props)
       }}
     >
       <h3>{props.title}</h3>
