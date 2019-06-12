@@ -1,3 +1,5 @@
+// This view is entirely in mock state
+
 import React from 'react'
 import styles from './EPGDetailView.scss'
 import PropTypes from 'prop-types'
