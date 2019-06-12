@@ -1,6 +1,6 @@
 # Notes on decisions and progress
 
-![Screenshot](https://github.com/nordhagen/native-candidate-tester/blob/feature/refactoring/mockups/screenshot-iphone.png)
+![Screenshot](https://raw.githubusercontent.com/nordhagen/native-candidate-tester/nordhagen/mockups/screenshot-iphone.png)
 
 ## How to run the project
 
