@@ -1,5 +1,7 @@
 # Notes on decisions and progress
 
+![Screenshot](https://github.com/nordhagen/native-candidate-tester/blob/feature/refactoring/mockups/screenshot-iphone.png)
+
 ## How to run the project
 
 If you have Node installed, run `npm start` from the repository root and open your web browser at the address provided in the command line readout.
@@ -12,6 +14,8 @@ $ python -m SimpleHTTPServer
 ```
 
 If you wish to play with time of day and speed of time in the app you will need to run `npm start`. Play with the constants in src/config.js and observe the effect.
+
+The interface is responsive in the interval from 320px wide to 768px wide, which generally is the upper limit of phablet layouts.
 
 ## Tech choices
 
