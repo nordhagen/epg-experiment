@@ -1,8 +1,4 @@
-import {
-  EPG_DATA_REQUESTED,
-  EPG_DATA_SUCCESS,
-  EPG_DATA_ERROR
-} from './actionTypes'
+import { EPG_DATA_REQUESTED, EPG_DATA_SUCCESS } from './actionTypes'
 
 import { fetchEPGSuccess } from './actions'
 import { call, put, takeLatest } from 'redux-saga/effects'
@@ -13,7 +9,9 @@ function* fetchEPGData(action) {
     const json = yield fetch('/epg.json').then(response => response.json())
     yield put(fetchEPGSuccess(json))
   } catch (e) {
-    yield put({ type: EPG_DATA_ERROR, message: e.message })
+    alert(
+      'Unable to load EPG data. Please check your Internet connection and try again!'
+    )
   }
 }
 
