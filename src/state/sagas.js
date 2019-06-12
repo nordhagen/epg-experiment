@@ -9,18 +9,10 @@ function* fetchEPGData(action) {
     const json = yield fetch('/epg.json').then(response => response.json())
     yield put(fetchEPGSuccess(json))
   } catch (e) {
+    // Better to handle errors crudely than not at all
     alert(
       'Unable to load EPG data. Please check your Internet connection and try again!'
     )
-  }
-}
-
-function* fetchProgrammeData(action) {
-  try {
-    const data = yield call(api.fetchProgramme, action.payload)
-    yield put({ type: 'PROGRAMME_DATA_SUCCESS', user: user })
-  } catch (e) {
-    yield put({ type: 'PROGRAMME_DATA_ERROR', message: e.message })
   }
 }
 
