@@ -1,5 +1,7 @@
 # Notes on decisions and progress
 
+![Screenshot](https://github.com/nordhagen/native-candidate-tester/blob/feature/refactoring/mockups/screenshot-iphone.png)
+
 ## How to run the project
 
 If you have Node installed, run `npm start` from the repository root and open your web browser at the address provided in the command line readout.
@@ -12,6 +14,8 @@ $ python -m SimpleHTTPServer
 ```
 
 If you wish to play with time of day and speed of time in the app you will need to run `npm start`. Play with the constants in src/config.js and observe the effect.
+
+The interface is responsive in the interval from 320px wide to 768px wide, which generally is the upper limit of phablet layouts.
 
 ## Tech choices
 
@@ -74,3 +78,12 @@ I will test the app in the latest versions of Chrome, Safari and Firefox.
 - Added the > phablet layout for the EPG. Horizontal scrolling works per channel, which is not the way it's supposed to work.
 - Added a slight gradient overlay to EPG items to make them prettier when their titles don't fit in the box.
 - Finished simple example of react component testing with Jest
+- Doing some refatoring, adding PropTypes
+
+## Ending remarks
+
+I spent about a day and a half on this challenge and I did make as much progress as I wanted. In fact a little bit extra. I chose to focus on demonstrating several skills rather than perfecting any one of those parts. Because of that there are a couple of known issues that I would have preferred to work out:
+
+- There is a bug with the smallest list layout of the EPG. On first render any channel with no current programme will correctly state this, but after the first clock tick the list re-renders displaying the first upcoming show for that channel instead.
+- The larger phablet EPG layout is made using my first theories about how to reflow the elements for a larger, horizontal layout. After doing this I realized that properly recreating the layout in the mockups would require nesting the elements in the list differently. That would be a refactoring too big for this exercise and the point of making the larger layout in the first place was to demonstrate a responsive strategy, not to code that interface perfectly. Doing that in a maximum of two days would have left little time for all the rest.
+- Larger applications like this would have been should be built with some form of type checking. Preferably I would have built this exercise using TypeScript, but I don't know it well enough to be sure it would not slow me down. I did add PropTypes instead.

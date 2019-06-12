@@ -5,6 +5,7 @@ import EPGChannelItem from '../components/EPGChannelItem'
 import { SHOW_CLOCK } from '../config'
 import { bindActionCreators } from 'redux'
 import { openModal } from '../state/actions'
+import PropTypes from 'prop-types'
 
 class EPGListView extends React.Component {
   render() {
@@ -15,7 +16,7 @@ class EPGListView extends React.Component {
         <EPGChannelItem
           key={d.id}
           time={time}
-          scheduleSelectDelegate={this.props.openModal}
+          selectDelegate={this.props.openModal}
           {...d}
         />
       ))
@@ -39,6 +40,12 @@ const mapStateToProps = state => ({
   time: state.time,
   channels: state.epg.channels
 })
+
+EPGListView.propTypes = {
+  channels: PropTypes.array.isRequired,
+  openModal: PropTypes.func.isRequired,
+  time: PropTypes.object.isRequired
+}
 
 export default connect(
   mapStateToProps,

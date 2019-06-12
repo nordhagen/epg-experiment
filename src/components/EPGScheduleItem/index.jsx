@@ -1,13 +1,14 @@
 import React from 'react'
 import moment from 'moment'
 import styles from './style.scss'
+import PropTypes from 'prop-types'
 
 const FMT = 'HH:MM'
 
-const EPGScheduleItem = props => {
-  let now = moment(props.time),
-    startTime = moment(props.start),
-    endTime = moment(props.end),
+const EPGScheduleItem = ({ id, title, time, start, end, selectDelegate }) => {
+  let now = moment(time),
+    startTime = moment(start),
+    endTime = moment(end),
     isLive = now.isBetween(startTime, endTime),
     className = styles.EPGScheduleItem,
     duration = endTime.diff(startTime),
@@ -31,13 +32,11 @@ const EPGScheduleItem = props => {
     <li
       style={inlineStyle}
       className={className}
-      onClick={e => {
-        props.selectDelegate(props)
-      }}
+      onClick={e => selectDelegate(id)}
     >
-      <h3>{props.title}</h3>
+      <h3>{title}</h3>
       <p className={styles.timeSlot}>
-        {moment(props.start).format(FMT)} – {moment(props.end).format(FMT)}
+        {moment(start).format(FMT)} – {moment(end).format(FMT)}
       </p>
 
       {isLive && (
@@ -47,6 +46,15 @@ const EPGScheduleItem = props => {
       )}
     </li>
   )
+}
+
+EPGScheduleItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  time: PropTypes.object.isRequired,
+  start: PropTypes.string.isRequired,
+  end: PropTypes.string.isRequired,
+  selectDelegate: PropTypes.func.isRequired
 }
 
 export default EPGScheduleItem

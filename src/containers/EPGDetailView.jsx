@@ -1,5 +1,8 @@
+// This view is entirely in mock state
+
 import React from 'react'
 import styles from './EPGDetailView.scss'
+import PropTypes from 'prop-types'
 
 class EPGDetailView extends React.Component {
   render() {
@@ -10,6 +13,10 @@ class EPGDetailView extends React.Component {
       />
     )
   }
+}
+
+EPGDetailView.propTypes = {
+  closeDelegate: PropTypes.func.isRequired
 }
 
 export default EPGDetailView
