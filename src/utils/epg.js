@@ -1,5 +1,3 @@
-// Using JS Date objects here instead of moment.js to keep utils portable
-
 export const findFirstAndLastScheduleItems = channels => {
   let showsOnly = [].concat.apply([], channels.map(ch => ch.schedules))
   showsOnly.sort((a, b) => new Date(a.start) > new Date(b.start))
@@ -7,6 +5,17 @@ export const findFirstAndLastScheduleItems = channels => {
     first: showsOnly[0],
     last: showsOnly[showsOnly.length - 1]
   }
+}
+
+export const makeIdsUnique = data => {
+  return data.channels.map(el => {
+    el.id += Math.random()
+    el.schedules = el.schedules.map(item => {
+      item.id += Math.random()
+      return item
+    })
+    return el
+  })
 }
 
 export const markAsLive = (channelsOriginal, currentDate) => {
