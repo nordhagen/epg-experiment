@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux'
 import { clockTick, fetchEPG, closeModal } from '../state/actions'
 import { CLOCK_TICK_FREQUENCY } from '../config'
 import { CSSTransition } from 'react-transition-group'
+import PropTypes from 'prop-types'
 
 import EPGListView from './EPGListView'
 import EPGDetailView from './EPGDetailView'
@@ -59,6 +60,13 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators({ clockTick, fetchEPG, closeModal }, dispatch)
+
+App.propTypes = {
+  clockTick: PropTypes.func.isRequired,
+  fetchEPG: PropTypes.func.isRequired,
+  closeModal: PropTypes.func.isRequired,
+  nav: PropTypes.object.isRequired
+}
 
 export default connect(
   mapStateToProps,

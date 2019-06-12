@@ -1,6 +1,7 @@
 import React from 'react'
 import moment from 'moment'
 import styles from './style.scss'
+import PropTypes from 'prop-types'
 
 const FMT = 'HH:MM'
 
@@ -45,6 +46,15 @@ const EPGScheduleItem = ({ id, title, time, start, end, selectDelegate }) => {
       )}
     </li>
   )
+}
+
+EPGScheduleItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  time: PropTypes.object.isRequired,
+  start: PropTypes.string.isRequired,
+  end: PropTypes.string.isRequired,
+  selectDelegate: PropTypes.func.isRequired
 }
 
 export default EPGScheduleItem

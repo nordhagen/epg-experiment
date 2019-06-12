@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './style.scss'
 import EPGScheduleItem from '../EPGScheduleItem'
+import PropTypes from 'prop-types'
 
 const EPGChannelItem = ({ title, images, schedules, time, selectDelegate }) => {
   let scheduleEls = schedules.map(item => (
@@ -20,6 +21,14 @@ const EPGChannelItem = ({ title, images, schedules, time, selectDelegate }) => {
       <ul className={styles.scheduleList}>{scheduleEls}</ul>
     </li>
   )
+}
+
+EPGChannelItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  images: PropTypes.object.isRequired,
+  schedules: PropTypes.array,
+  time: PropTypes.object.isRequired,
+  selectDelegate: PropTypes.func.isRequired
 }
 
 export default EPGChannelItem
