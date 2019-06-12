@@ -15,7 +15,7 @@ class EPGListView extends React.Component {
         <EPGChannelItem
           key={d.id}
           time={time}
-          scheduleSelectDelegate={this.props.openModal}
+          selectDelegate={this.props.openModal}
           {...d}
         />
       ))
