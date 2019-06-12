@@ -4,10 +4,10 @@ import styles from './style.scss'
 
 const FMT = 'HH:MM'
 
-const EPGScheduleItem = props => {
-  let now = moment(props.time),
-    startTime = moment(props.start),
-    endTime = moment(props.end),
+const EPGScheduleItem = ({ id, title, time, start, end, selectDelegate }) => {
+  let now = moment(time),
+    startTime = moment(start),
+    endTime = moment(end),
     isLive = now.isBetween(startTime, endTime),
     className = styles.EPGScheduleItem,
     duration = endTime.diff(startTime),
@@ -31,13 +31,11 @@ const EPGScheduleItem = props => {
     <li
       style={inlineStyle}
       className={className}
-      onClick={e => {
-        props.selectDelegate(props)
-      }}
+      onClick={e => selectDelegate(id)}
     >
-      <h3>{props.title}</h3>
+      <h3>{title}</h3>
       <p className={styles.timeSlot}>
-        {moment(props.start).format(FMT)} – {moment(props.end).format(FMT)}
+        {moment(start).format(FMT)} – {moment(end).format(FMT)}
       </p>
 
       {isLive && (
