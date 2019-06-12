@@ -1,3 +1,5 @@
+// This view is entirely in mock state
+
 import React from 'react'
 import image from './header-mock.png'
 import PropTypes from 'prop-types'
