@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It renders correctly 1`] = `
+<li
+  onClick={[Function]}
+  style={
+    Object {
+      "width": "53.33333333333333%",
+    }
+  }
+>
+  <h3>
+    Vikings
+  </h3>
+  <p>
+    12:10
+     – 
+    13:10
+  </p>
+</li>
+`;
