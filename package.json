@@ -19,6 +19,7 @@
   },
   "scripts": {
     "test": "jest",
+    "test-update-snapshots": "jest -u",
     "start": "parcel -d dev src/index.html",
     "build": "parcel build -d dist src/index.html"
   },
