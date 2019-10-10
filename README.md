@@ -17,20 +17,6 @@ If you wish to play with time of day and speed of time in the app you will need 
 
 The interface is responsive in the interval from 320px wide to 768px wide, which generally is the upper limit of phablet layouts.
 
-## Tech choices
-
-Given the need to focus on getting up and running quickly I chose to go with the project structure I am most familiar with, which is JavaScript with React+Redux. My previous experience with asynchronous Redux is with the Thunk middleware. However in this instance I will instead use Sagas. I also chose to use Parcel as a build system in the interest of simplicity.
-
-The separation between containers and components will be a hybrid one. Components will be stateless and unaware of the architecture of the rest of the app, whereas the containers will be stateful and connected to the state management system. Where it will differ from accepted best practices is in that containers and their corresponding component rendering code will be put together into one class file.
-
-I will employ CSS Modules with SASS syntax for scoped CSS because I like how CSS modules compartmentalizes things. For CSS preprocessors I actually prefer Stylus, but since it has fallen out of fashion and SASS seems to be the industry standard in React apps I will go with that. As for layout strategies I usually do desktop sizes first because that's the design files that are often ready first. In this instance I think the provided mockups and my strategy makes for a smallest-layout-first approach. ~~I will use CSS Grid for main layout framework, knowing full well that browser support has not hit prime time peak yet. I could do the same layout without it, it's just quicker this way. For the large EPG layout I think FlexBox is the obvious answer.~~ After some trial and error I decided that FlexBox was the obvious answer for all parts of the ui.
-
-I always like to stub out all views in an application right at the start, even if they're all just wireframes, mockups or simple rectangles with the name of the view in them. Then whenever I start work on a single one of these views I like to start with bare, semantic markup first. Then adding styles and lastly adding interactivity and functionality. I think this gives me a nice, visual way of gauging my progress.
-
-Needless to say this code base is going to be more elaborate than needed. I will imagine this as being the start of a fully featured VOD app where the architecture choices would need to take into account the apparent scale of the app in the near future.
-
-I will test the app in the latest versions of Chrome, Safari and Firefox.
-
 ## Goals
 
 - [x] Make the main EPG view in both versions to demonstrate how triggering different breakpoints
@@ -82,7 +68,7 @@ I will test the app in the latest versions of Chrome, Safari and Firefox.
 
 ## Ending remarks
 
-I spent about a day and a half on this challenge and I did make as much progress as I wanted. In fact a little bit extra. I chose to focus on demonstrating several skills rather than perfecting any one of those parts. Because of that there are a couple of known issues that I would have preferred to work out:
+There are a couple of known issues that I would have preferred to work out:
 
 - There is a bug with the smallest list layout of the EPG. On first render any channel with no current programme will correctly state this, but after the first clock tick the list re-renders displaying the first upcoming show for that channel instead.
 - The larger phablet EPG layout is made using my first theories about how to reflow the elements for a larger, horizontal layout. After doing this I realized that properly recreating the layout in the mockups would require nesting the elements in the list differently. That would be a refactoring too big for this exercise and the point of making the larger layout in the first place was to demonstrate a responsive strategy, not to code that interface perfectly. Doing that in a maximum of two days would have left little time for all the rest.
